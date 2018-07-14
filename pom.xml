@@ -43,7 +43,7 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<yangtools.version>2.0.2-SNAPSHOT</yangtools.version>
+		<yangtools.version>2.0.2</yangtools.version>
 		<mdsal.version>2.4.0-SNAPSHOT</mdsal.version>
 		<mdsalmodel.version>0.12.0-SNAPSHOT</mdsalmodel.version>
 		<jackson.version>2.8.7</jackson.version>

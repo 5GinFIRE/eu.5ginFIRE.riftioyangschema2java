@@ -181,6 +181,7 @@ public class IpProfileParamsBuilder implements Builder<urn.ietf.params.xml.ns.ya
         @JsonProperty("security-group")
         private final java.lang.String _securityGroup;
         private final IpPrefix _subnetAddress;
+        @JsonProperty("subnet-prefix-pool")
         private final java.lang.String _subnetPrefixPool;
 
         private Map<java.lang.Class<? extends Augmentation<urn.ietf.params.xml.ns.yang.nfvo.mano.types.rev150423.ip.profile.info.IpProfileParams>>, Augmentation<urn.ietf.params.xml.ns.yang.nfvo.mano.types.rev150423.ip.profile.info.IpProfileParams>> augmentation = Collections.emptyMap();

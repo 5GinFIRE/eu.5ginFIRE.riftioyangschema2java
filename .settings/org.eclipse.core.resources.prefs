@@ -3,4 +3,6 @@ encoding//src/main/java=UTF-8
 encoding//src/test/java=UTF-8
 encoding//target-ide/generated-sources/spi=UTF-8
 encoding//target-ide/generated-sources/yang=UTF-8
+encoding//target/generated-sources/spi=UTF-8
+encoding//target/generated-sources/yang=UTF-8
 encoding/<project>=UTF-8

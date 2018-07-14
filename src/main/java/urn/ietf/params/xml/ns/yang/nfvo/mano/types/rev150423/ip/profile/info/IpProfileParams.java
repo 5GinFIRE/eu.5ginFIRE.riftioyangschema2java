@@ -62,7 +62,7 @@ import urn.ietf.params.xml.ns.yang.nfvo.mano.types.rev150423.ip.profile.info.ip.
  *
  */
 @JsonDeserialize(as = IpProfileParamsImpl.class)
-@JsonIgnoreProperties( {"dhcp-params", "subnet-address" } )
+@JsonIgnoreProperties( {"dhcp-params", "subnet-address", "dns-server" } )
 public interface IpProfileParams
     extends
     ChildOf<IpProfileInfo>,
