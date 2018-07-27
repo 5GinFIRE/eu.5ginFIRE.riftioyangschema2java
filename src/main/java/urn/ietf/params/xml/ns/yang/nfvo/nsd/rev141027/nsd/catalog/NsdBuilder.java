@@ -495,7 +495,8 @@ public class NsdBuilder implements Builder<urn.ietf.params.xml.ns.yang.nfvo.nsd.
         private final java.lang.String _vendor;
         @JsonProperty("version")
         private final java.lang.String _version;
-        private List<Vld> _vld = new ArrayList<Vld>();
+        private List<Vld> _vld = new ArrayList<Vld>();        
+        @JsonProperty("vnf-dependency")
         private final List<VnfDependency> _vnfDependency;
         private final List<Vnffgd> _vnffgd;
 

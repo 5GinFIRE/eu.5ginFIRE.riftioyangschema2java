@@ -4,7 +4,11 @@ import org.opendaylight.yangtools.yang.binding.ChildOf;
 import org.opendaylight.yangtools.yang.binding.Identifiable;
 import org.opendaylight.yangtools.yang.common.QName;
 
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+
 import urn.ietf.params.xml.ns.yang.nfvo.nsd.rev141027.NsdDescriptor;
+import urn.ietf.params.xml.ns.yang.nfvo.nsd.rev141027.nsd.catalog.NsdBuilder.NsdImpl;
+import urn.ietf.params.xml.ns.yang.nfvo.nsd.rev141027.nsd.descriptor.VnfDependencyBuilder.VnfDependencyImpl;
 
 /**
  * List of VNF dependencies.
@@ -29,6 +33,7 @@ import urn.ietf.params.xml.ns.yang.nfvo.nsd.rev141027.NsdDescriptor;
  * @see urn.ietf.params.xml.ns.yang.nfvo.nsd.rev141027.nsd.descriptor.VnfDependencyKey
  *
  */
+@JsonDeserialize(as = VnfDependencyImpl.class)
 public interface VnfDependency
     extends
     ChildOf<NsdDescriptor>,

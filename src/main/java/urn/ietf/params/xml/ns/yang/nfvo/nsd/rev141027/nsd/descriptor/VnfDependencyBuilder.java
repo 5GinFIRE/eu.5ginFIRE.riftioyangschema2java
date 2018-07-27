@@ -9,6 +9,10 @@ import org.opendaylight.yangtools.yang.binding.Augmentation;
 import org.opendaylight.yangtools.yang.binding.AugmentationHolder;
 import org.opendaylight.yangtools.yang.binding.DataObject;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+import urn.ietf.params.xml.ns.yang.nfvo.nsd.rev141027.nsd.catalog.NsdBuilder;
+
 /**
  * Class that builds {@link urn.ietf.params.xml.ns.yang.nfvo.nsd.rev141027.nsd.descriptor.VnfDependency} instances.
  * 
@@ -115,15 +119,17 @@ public class VnfDependencyBuilder implements Builder<urn.ietf.params.xml.ns.yang
         return new VnfDependencyImpl(this);
     }
 
-    private static final class VnfDependencyImpl implements VnfDependency {
+    public static final class VnfDependencyImpl implements VnfDependency {
 
         @Override
         public java.lang.Class<urn.ietf.params.xml.ns.yang.nfvo.nsd.rev141027.nsd.descriptor.VnfDependency> getImplementedInterface() {
             return urn.ietf.params.xml.ns.yang.nfvo.nsd.rev141027.nsd.descriptor.VnfDependency.class;
         }
 
-        private final VnfDependencyKey _key;
+        private final VnfDependencyKey _key;       
+        @JsonProperty("vnf-depends-on-ref")
         private final java.lang.String _vnfDependsOnRef;
+        @JsonProperty("vnf-source-ref")
         private final java.lang.String _vnfSourceRef;
 
         private Map<java.lang.Class<? extends Augmentation<urn.ietf.params.xml.ns.yang.nfvo.nsd.rev141027.nsd.descriptor.VnfDependency>>, Augmentation<urn.ietf.params.xml.ns.yang.nfvo.nsd.rev141027.nsd.descriptor.VnfDependency>> augmentation = Collections.emptyMap();
@@ -152,6 +158,11 @@ public class VnfDependencyBuilder implements Builder<urn.ietf.params.xml.ns.yang
             }
         }
 
+
+    	public VnfDependencyImpl(){
+    		this( new VnfDependencyBuilder() );
+    	}
+    	
         @Override
         public VnfDependencyKey getKey() {
             return _key;
