@@ -25,6 +25,8 @@ public class ExternalInterfaceBuilder implements Builder<urn.ietf.params.xml.ns.
     private java.lang.String _name;
     private VirtualInterface _virtualInterface;
     private java.lang.String _vnfdConnectionPointRef;
+    private java.lang.String _type;
+    
 
     Map<java.lang.Class<? extends Augmentation<urn.ietf.params.xml.ns.yang.nfvo.vnfd.rev150910.vnfd.descriptor.vdu.ExternalInterface>>, Augmentation<urn.ietf.params.xml.ns.yang.nfvo.vnfd.rev150910.vnfd.descriptor.vdu.ExternalInterface>> augmentation = Collections.emptyMap();
 
@@ -94,9 +96,12 @@ public class ExternalInterfaceBuilder implements Builder<urn.ietf.params.xml.ns.
     public VirtualInterface getVirtualInterface() {
         return _virtualInterface;
     }
-    
+
     public java.lang.String getVnfdConnectionPointRef() {
         return _vnfdConnectionPointRef;
+    }
+    public java.lang.String getType() {
+        return _type;
     }
     
     @SuppressWarnings("unchecked")
@@ -167,10 +172,14 @@ public class ExternalInterfaceBuilder implements Builder<urn.ietf.params.xml.ns.
         private final ExternalInterfaceKey _key;
         @JsonProperty("name")
         private final java.lang.String _name;
+        @JsonProperty("type")
+        private final java.lang.String _type;
         @JsonProperty("virtual-interface")
         private final VirtualInterface _virtualInterface;
         @JsonProperty("vnfd-connection-point-ref")
         private final java.lang.String _vnfdConnectionPointRef;
+        @JsonProperty("external-connection-point-ref")
+        private final java.lang.String _vnfdConnectionPointRef2;
 
         private Map<java.lang.Class<? extends Augmentation<urn.ietf.params.xml.ns.yang.nfvo.vnfd.rev150910.vnfd.descriptor.vdu.ExternalInterface>>, Augmentation<urn.ietf.params.xml.ns.yang.nfvo.vnfd.rev150910.vnfd.descriptor.vdu.ExternalInterface>> augmentation = Collections.emptyMap();
 
@@ -186,6 +195,8 @@ public class ExternalInterfaceBuilder implements Builder<urn.ietf.params.xml.ns.
             }
             this._virtualInterface = base.getVirtualInterface();
             this._vnfdConnectionPointRef = base.getVnfdConnectionPointRef();
+            this._vnfdConnectionPointRef2 = base.getVnfdConnectionPointRef();
+            this._type = base.getType();
             switch (base.augmentation.size()) {
             case 0:
                 this.augmentation = Collections.emptyMap();
@@ -211,6 +222,11 @@ public class ExternalInterfaceBuilder implements Builder<urn.ietf.params.xml.ns.
         @Override
         public java.lang.String getName() {
             return _name;
+        }
+        
+
+        public java.lang.String getType() {
+            return _type;
         }
         
         @Override
